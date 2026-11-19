@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apple uslubidagi o'quv loyiha — mahsulotlar katalogi va ro'yxatdan o'tish oynasi.">
+  <title>Apple — Discover the difference</title>
+  <link rel="preconnect" href="https://images.apple.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">Yangi kolleksiya bilan tanishing. <a href="#products">Batafsil ko‘rish</a> <span>›</span></div>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Asosiy navigatsiya">
+      <a class="brand" href="#home" aria-label="Apple bosh sahifa"></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menyuni ochish">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#products" data-filter="all">Store</a>
+        <a href="#products" data-filter="Mac">Mac</a>
+        <a href="#products" data-filter="iPad">iPad</a>
+        <a href="#products" data-filter="iPhone">iPhone</a>
+        <a href="#products" data-filter="Watch">Watch</a>
+        <a href="#products" data-filter="AirPods">AirPods</a>
+        <a href="#contact">Aloqa</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Qidirish">⌕</button>
+        <button class="icon-btn bag-btn" id="bagButton" aria-label="Tanlanganlar">▢<span id="bagCount">0</span></button>
+      </div>
+    </nav>
+    <div class="search-panel" id="searchPanel">
+      <input id="searchInput" type="search" placeholder="Mahsulot qidirish..." aria-label="Mahsulot qidirish">
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YANGI AVLOD. YANGI TAJRIBA.</p>
+        <h1>iPhone 17 Pro</h1>
+        <p class="hero-subtitle">Kuch. Tezlik. Mukammal kamera.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#products" data-filter-link="iPhone">Ko‘proq bilish</a>
+          <button class="button button-outline" data-buy="iPhone 17 Pro">Sotib olish</button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.apple.com/v/homepage/images/iphone-family/a/hero_iphone_family__be5jkzxszb1e_large.jpg" alt="Apple iPhone oilasi">
+      </div>
+      <div class="hero-dots" aria-label="Slaydlar">
+        <button class="dot active" data-slide="0" aria-label="1-slayd"></button>
+        <button class="dot" data-slide="1" aria-label="2-slayd"></button>
+        <button class="dot" data-slide="2" aria-label="3-slayd"></button>
+      </div>
+    </section>
+
+    <section class="category-strip" aria-label="Mahsulot kategoriyalari">
+      <button class="category active" data-filter="all"><span>⌘</span> Barchasi</button>
+      <button class="category" data-filter="iPhone"><span>▯</span> iPhone</button>
+      <button class="category" data-filter="Mac"><span>▱</span> Mac</button>
+      <button class="category" data-filter="iPad"><span>▭</span> iPad</button>
+      <button class="category" data-filter="Watch"><span>◷</span> Watch</button>
+      <button class="category" data-filter="AirPods"><span>◖</span> AirPods</button>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div><p class="eyebrow">APPLE COLLECTION</p><h2>Qaysi biri sizga mos?</h2></div>
+        <p>Sevimli qurilmangizni tanlang.<br>Har bir detalda o‘ziga xoslik.</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>Bu qidiruv bo‘yicha mahsulot topilmadi.</p>
+    </section>
+
+    <section class="feature-banner">
+      <div class="feature-copy">
+        <p class="eyebrow">MACBOOK AIR</p>
+        <h2>Yengil. Kuchli.<br>Cheksiz imkoniyat.</h2>
+        <p>M-seriyali chip. Uzoq ishlaydigan batareya. Har kuni uchun qulaylik.</p>
+        <button class="text-link" data-buy="MacBook Air M5">MacBook Air’ni tanlash <span>›</span></button>
+      </div>
+      <img src="https://images.apple.com/v/homepage/images/macbook-air-m5/a/hero_macbook_air_m5__eb1idggd120y_large.jpg" alt="MacBook Air">
+    </section>
+
+    <section class="why-section">
+      <p class="eyebrow">APPLE EXPERIENCE</p>
+      <h2>Hammasi bir-biri bilan uyg‘un.</h2>
+      <div class="why-grid">
+        <article><span>✦</span><h3>Yaxlit ekotizim</h3><p>Qurilmalaringiz o‘zaro qulay ishlaydi.</p></article>
+        <article><span>◈</span><h3>O‘ylangan dizayn</h3><p>Soddalik va qulaylik har bir detalda.</p></article>
+        <article><span>⌁</span><h3>Maxfiylik</h3><p>Ma’lumotlaringizga e’tibor bilan yondashuv.</p></article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-intro">
+        <p class="eyebrow">BIZ BILAN BOG‘LANING</p>
+        <h2>Savolingiz bormi?</h2>
+        <p>Ma’lumot qoldiring — demo loyiha doirasida murojaatingiz qabul qilinganini ko‘rsatamiz.</p>
+        <div class="contact-details"><span>✉</span> hello@apple-demo.uz</div>
+        <div class="contact-details"><span>⌖</span> Toshkent, O‘zbekiston</div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label>Ismingiz<input name="name" type="text" placeholder="Ismingiz" required></label>
+        <label>Email<input name="email" type="email" placeholder="name@example.com" required></label>
+        <label>Xabaringiz<textarea name="message" rows="4" placeholder="Xabaringizni yozing..." required></textarea></label>
+        <button class="button button-dark" type="submit">Xabar yuborish</button>
+        <p class="form-note" id="contactNote" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p> Apple-style demo store</p>
+    <p>Bu mustaqil o‘quv loyiha. Apple Inc. bilan rasmiy aloqasi yo‘q. Narxlar demo uchun keltirilgan.</p>
+    <a href="#home">Yuqoriga qaytish ↑</a>
+  </footer>
+
+  <div class="modal-backdrop" id="registerModal" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Yopish">×</button>
+      <p class="eyebrow">APPLE DEMO STORE</p>
+      <h2 id="modalTitle">Ro‘yxatdan o‘ting</h2>
+      <p class="modal-product" id="modalProduct">Tanlangan mahsulot</p>
+      <form id="registerForm">
+        <label>To‘liq ism<input name="fullName" type="text" placeholder="Ism va familiya" required></label>
+        <label>Telefon raqam<input name="phone" type="tel" placeholder="+998 90 123 45 67" required pattern="[+0-9 ()-]{9,}"></label>
+        <label>Email<input name="email" type="email" placeholder="name@example.com" required></label>
+        <button class="button button-dark full-width" type="submit">Davom etish</button>
+        <p class="form-note" id="registerNote" role="status"></p>
+      </form>
+      <small>Bu demo forma. Ma’lumotlar serverga yuborilmaydi va haqiqiy buyurtma rasmiylashtirilmaydi.</small>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
